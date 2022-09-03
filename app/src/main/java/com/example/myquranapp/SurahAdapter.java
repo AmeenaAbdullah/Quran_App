@@ -12,8 +12,7 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
-public class SurahAdapter  extends ArrayAdapter<tayah> {
-
+public class SurahAdapter extends ArrayAdapter<tayah>  {
 
     public SurahAdapter(@NonNull Context context, ArrayList<tayah> surah) {
         super(context, 0, surah);
@@ -25,11 +24,11 @@ public class SurahAdapter  extends ArrayAdapter<tayah> {
         tayah myclass = getItem(position);
         convertView = LayoutInflater.from(getContext()).inflate(R.layout.surah_customized_view, parent, false);
         TextView ayat = convertView.findViewById(R.id.surahAyat);
-         ayat.setText(String.valueOf( myclass.getArabicText()));
+        ayat.setText(String.valueOf( myclass.getArabicText()));
         TextView ayattrjama = convertView.findViewById(R.id.ayattrjama);
         ayattrjama.setText(String.valueOf( myclass.getFatehMuhammadJaland()));
 
         return convertView;
     }
 
-}
+    }

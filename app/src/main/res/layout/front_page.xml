@@ -10,8 +10,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="299dp"
-        android:layout_height="405dp"
+        android:layout_width="301dp"
+        android:layout_height="306dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.76">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/surahIndex"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:width="300dp"
@@ -30,7 +30,7 @@
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/paraIndex"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:width="300dp"

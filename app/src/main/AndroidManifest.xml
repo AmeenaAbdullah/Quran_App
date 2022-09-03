@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyQuranApp">
         <activity
-            android:name=".FrontPageActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".Nav_drawer"
@@ -21,13 +21,13 @@
             android:name=".SurahActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".AllSurahNamesActivity"
             android:exported="false" />
         <activity
             android:name=".HeaderActivity"
             android:exported="false" />
         <activity
-            android:name=".AllSurahNamesActivity"
+            android:name=".FrontPageActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

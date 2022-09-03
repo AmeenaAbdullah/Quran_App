@@ -4,19 +4,15 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.ListIterator;
 
 public class SurahActivity extends AppCompatActivity {
+
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -30,7 +26,7 @@ public class SurahActivity extends AppCompatActivity {
        Intent i =getIntent();
         int index = Integer.parseInt(i.getStringExtra("index"));
         ArrayList<tayah> list =dbHelper.Surah(index+1);
-       SurahAdapter sura=new SurahAdapter(this,list);
+        SurahAdapter sura=new SurahAdapter(this,list);
         String namesurah = i.getStringExtra("surahName");
         AllSurahList.setAdapter(sura);
         name.setText(namesurah);
