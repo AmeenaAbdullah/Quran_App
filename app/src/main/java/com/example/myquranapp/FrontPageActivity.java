@@ -28,8 +28,8 @@ public class FrontPageActivity extends AppCompatActivity {
         paraIndex.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent surahIndex=new Intent(FrontPageActivity.this,Paraame.class);
-//                startActivity(surahIndex);
+                Intent surahIndex=new Intent(FrontPageActivity.this,AllParaNamesActivity.class);
+                startActivity(surahIndex);
             }
         });
     }

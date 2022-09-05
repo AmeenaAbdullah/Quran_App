@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyQuranApp">
         <activity
+            android:name=".ParaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AllParaNamesActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity

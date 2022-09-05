@@ -4,8 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/se/semester6/MC/New folder/Quran_App-main/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/se/semester6/MC/New folder/Quran_App-main/app/src/main/res/layout/all_para_names.xml" value="0.213768115942029" />
         <entry key="..\:/se/semester6/MC/New folder/Quran_App-main/app/src/main/res/layout/all_surah_names.xml" value="0.22826086956521738" />
         <entry key="..\:/se/semester6/MC/New folder/Quran_App-main/app/src/main/res/layout/front_page.xml" value="0.22826086956521738" />
+        <entry key="..\:/se/semester6/MC/New folder/Quran_App-main/app/src/main/res/layout/para.xml" value="0.25416666666666665" />
+        <entry key="..\:/se/semester6/MC/New folder/Quran_App-main/app/src/main/res/layout/para_customized_view.xml" value="0.2" />
+        <entry key="..\:/se/semester6/MC/New folder/Quran_App-main/app/src/main/res/layout/paraname.xml" value="0.23854166666666668" />
+        <entry key="..\:/se/semester6/MC/New folder/Quran_App-main/app/src/main/res/layout/surah.xml" value="0.19270833333333334" />
+        <entry key="..\:/se/semester6/MC/New folder/Quran_App-main/app/src/main/res/layout/surah_customized_view.xml" value="0.264" />
         <entry key="..\:/se/semester6/MC/New folder/Quran_App-main/app/src/main/res/layout/surah_name.xml" value="0.22826086956521738" />
         <entry key="..\:/se/semester6/MC/New folder/Quran_App-main/app/src/main/res/layout/surahname.xml" value="0.22826086956521738" />
         <entry key="..\:/se/semester6/MC/QuranApp/Quran_App-main/Quran_App-main/Quran_App-main/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />

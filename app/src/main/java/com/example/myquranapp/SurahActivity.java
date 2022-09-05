@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -24,12 +25,16 @@ public class SurahActivity extends AppCompatActivity {
         ListView AllSurahList = findViewById(R.id.surahList);
         DBhelper dbHelper  = new DBhelper(SurahActivity.this);
        Intent i =getIntent();
-        int index = Integer.parseInt(i.getStringExtra("index"));
+       String nameE=i.getStringExtra("nameE");
+       String nameU=i.getStringExtra("nameU");
+       int index = Integer.parseInt(i.getStringExtra("index"));
+
         ArrayList<tayah> list =dbHelper.Surah(index+1);
         SurahAdapter sura=new SurahAdapter(this,list);
-        String namesurah = i.getStringExtra("surahName");
+
+//        String namesurah = i.getStringExtra("surahName");
         AllSurahList.setAdapter(sura);
-        name.setText(namesurah);
+         name.setText(nameU);
 //        TextView fullsurah=findViewById(R.id.fullsurah);
 //        DBhelper dbHelper  = new DBhelper(SurahActivity.this);
 //        Intent i =getIntent();

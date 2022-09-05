@@ -64,4 +64,54 @@ public class DBhelper extends SQLiteOpenHelper {
         data.close();
         return  surah;
     }
+    public ArrayList<tayah> getParah(int index){
+        ArrayList<tayah> ayat=new ArrayList<>();
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "SELECT *" + " FROM " + "tayah" + " WHERE " + "ParaID" + " = '" + index + "'";
+        Cursor data = db.rawQuery(query, null);
+
+
+        if (data.moveToFirst()) {
+            do {
+                ayat.add(new tayah(data.getInt(0), data.getInt(1), data.getInt(2),data.getString(3),data.getString(4),data.getString(5),data.getString(6),data.getString(7),data.getInt(8),data.getInt(9),data.getInt(10)));
+            } while (data.moveToNext());
+
+        }
+        data.close();
+        return  ayat;
+    }
+
+//    public ArrayList<tayah> getParah(int index){
+//        ArrayList<tayah> ayat=new ArrayList<>();
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        String query = "SELECT *" + " FROM " + "tayah" + " WHERE " + "ParaID" + " = '" + index + "'";
+//        Cursor data = db.rawQuery(query, null);
+//
+//
+//        if (data.moveToFirst()) {
+//            do {
+//                ayat.add(new tayah(data.getInt(0), data.getInt(1), data.getInt(2),data.getString(3),data.getString(4),data.getString(5),data.getString(6),data.getString(7),data.getInt(8),data.getInt(9),data.getInt(10)));
+//            } while (data.moveToNext());
+//
+//        }
+//        data.close();
+//        return  ayat;
+//    }
+//    public ArrayList<para> getAllPara(){
+//
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        String query = "SELECT *" + " FROM " + "tayah" + " WHERE " + "SuraID" + " = '" + index + "'";
+//        Cursor data = db.rawQuery(query, null);
+//
+//        ArrayList<para> para = new ArrayList<>();
+//
+//        if (data.moveToFirst()) {
+//            do {
+//                para.add(new tayah(data.getInt(0), data.getInt(1), data.getInt(2),data.getString(3),data.getString(4),data.getString(5),data.getString(6),data.getString(7),data.getInt(8),data.getInt(9),data.getInt(10)));
+//            } while (data.moveToNext());
+//
+//        }
+//        data.close();
+//        return  para;
+//    }
 }

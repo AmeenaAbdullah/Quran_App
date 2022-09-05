@@ -8,27 +8,25 @@ import android.os.Bundle;
 
 import java.util.ArrayList;
 
-public class AllSurahNamesActivity extends AppCompatActivity {
+public class AllParaNamesActivity extends AppCompatActivity {
+    QDH store;
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
     RecyclerView.LayoutManager layoutManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.nav_main);
-
-        DBhelper dbHelper  = new DBhelper(AllSurahNamesActivity.this);
-        ArrayList<tsurah> list =dbHelper.getAllSurah();    //Get Data from DB
-        recyclerView = findViewById(R.id.recycleViewsurah);
-
+        setContentView(R.layout.all_para_names);
+        store=new QDH();
+       ArrayList<para> list =store.getAllPara();
+        recyclerView = findViewById(R.id.recycleViewpara);
         recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(AllSurahNamesActivity.this,
-                LinearLayoutManager.VERTICAL,
+        layoutManager = new LinearLayoutManager(AllParaNamesActivity.this,
+               LinearLayoutManager.VERTICAL,
                 false);
         recyclerView.setLayoutManager(layoutManager);
 
-        adapter = new All_Surah_nameAdapter(getApplicationContext(),list) ;
+        adapter = new AllParaNameAdapter(getApplicationContext(),list) ;
         recyclerView.setAdapter(adapter);
-
     }
 }

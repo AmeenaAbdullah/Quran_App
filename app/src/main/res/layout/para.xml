@@ -4,29 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AllSurahNamesActivity">
+    tools:context=".ParaActivity">
 
     <TextView
-        android:id="@+id/para"
-        android:layout_width="109dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/suraindex"
-        android:textSize="16dp"
-
-        app:fontFamily="sans-serif-medium"
+        android:id="@+id/paraname"
+        android:layout_width="92dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="28dp"
+        android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="395dp"
-
-        android:id="@+id/recycleViewsurah"
-        android:layout_height="637dp"
+        android:id="@+id/recyclerViewpara"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/para" />
-
+        app:layout_constraintTop_toBottomOf="@+id/paraname" />
 </androidx.constraintlayout.widget.ConstraintLayout>

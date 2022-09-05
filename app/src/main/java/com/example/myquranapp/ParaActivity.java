@@ -4,30 +4,42 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import java.util.ArrayList;
 
-public class AllSurahNamesActivity extends AppCompatActivity {
+public class ParaActivity extends AppCompatActivity {
+    QDH store;
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
     RecyclerView.LayoutManager layoutManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.nav_main);
+        setContentView(R.layout.para);
+        store=new QDH();
 
-        DBhelper dbHelper  = new DBhelper(AllSurahNamesActivity.this);
-        ArrayList<tsurah> list =dbHelper.getAllSurah();    //Get Data from DB
-        recyclerView = findViewById(R.id.recycleViewsurah);
 
+        Intent i =getIntent();
+        String nameE=i.getStringExtra("nameE");
+        String nameU=i.getStringExtra("nameU");
+        int index = Integer.parseInt(i.getStringExtra("index"));
+
+        DBhelper dbHelper  = new DBhelper(ParaActivity.this);
+
+
+
+        ArrayList<tayah> list =dbHelper.getParah(index+1);
+
+        recyclerView = findViewById(R.id.recyclerViewpara);
         recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(AllSurahNamesActivity.this,
+        layoutManager = new LinearLayoutManager(ParaActivity.this,
                 LinearLayoutManager.VERTICAL,
                 false);
         recyclerView.setLayoutManager(layoutManager);
 
-        adapter = new All_Surah_nameAdapter(getApplicationContext(),list) ;
+         adapter = new paraAdapter(getApplicationContext(),list) ;
         recyclerView.setAdapter(adapter);
 
     }
