@@ -3,28 +3,49 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
+    android:background="#0C0C0C"
     android:layout_height="wrap_content">
 
     <View
         android:id="@+id/divider3"
-        android:layout_width="367dp"
-        android:layout_height="wrap_content"
-        android:background="@color/design_default_color_secondary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="23dp" />
+        android:layout_width="439dp"
+        android:layout_height="8dp"
+        android:layout_marginTop="37dp"
+        android:background="#FDFDFC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.964"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paratrjama" />
 
     <TextView
         android:id="@+id/paraname2"
         android:layout_width="wrap_content"
-        android:layout_height="61dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="SurahNameU"
-        android:textColor="@android:color/holo_green_dark"
-        android:textColorHint="@android:color/holo_green_dark"
-        android:textSize="16sp"
+        android:textColor="#FEFCFF"
+        android:backgroundTint="#E8E8E8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/noorehuda"
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:textSize="20sp"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/paratrjama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+
+        android:textColor="#FEFCFF"
+        android:backgroundTint="#E8E8E8"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paraname2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

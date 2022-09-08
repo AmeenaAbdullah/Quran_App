@@ -21,6 +21,7 @@ public class FrontPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent surahIndex=new Intent(FrontPageActivity.this,AllSurahNamesActivity.class);
+                surahIndex.putExtra("value","0");
                 startActivity(surahIndex);
             }
         });
@@ -28,7 +29,9 @@ public class FrontPageActivity extends AppCompatActivity {
         paraIndex.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent surahIndex=new Intent(FrontPageActivity.this,AllParaNamesActivity.class);
+                surahIndex.putExtra("value","0");
                 startActivity(surahIndex);
             }
         });

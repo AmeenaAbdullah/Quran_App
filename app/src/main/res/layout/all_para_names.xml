@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    android:background="@drawable/background"
     tools:context=".AllSurahNamesActivity">
 
     <TextView
         android:id="@+id/para"
         android:layout_width="109dp"
         android:layout_height="34dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="80dp"
         android:text="@string/ParaIndex"
         android:textSize="16dp"
 
@@ -21,16 +23,18 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleViewpara"
-        android:layout_width="393dp"
-        android:layout_height="594dp"
+        android:layout_width="286dp"
+        android:layout_height="503dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
+        android:textColor="#FEFCFF"
+        android:backgroundTint="#E8E8E8"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.242"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/para"
-        app:layout_constraintVertical_bias="0.578" />
+        app:layout_constraintVertical_bias="0.377" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

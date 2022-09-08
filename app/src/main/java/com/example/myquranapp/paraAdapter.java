@@ -33,6 +33,7 @@ public class paraAdapter extends RecyclerView.Adapter<paraAdapter.MyVH>{
     public void onBindViewHolder(@NonNull paraAdapter.MyVH holder, int position) {
         holder.data=ayat.get(position);
         holder.para.setText(holder.data.getArabicText());
+        holder.paratrjama.setText(holder.data.getFatehMuhammadJaland());
         int p=position;
         tayah parah=ayat.get(position);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -54,14 +55,14 @@ public class paraAdapter extends RecyclerView.Adapter<paraAdapter.MyVH>{
     }
     public class MyVH extends RecyclerView.ViewHolder {
         TextView para;
-        TextView paraayat;
+        TextView paratrjama;
         TextView Id;
         tayah data;
         public MyVH(@NonNull View itemView) {
             super(itemView);
 
             para = itemView.findViewById(R.id.paraname2);
-//            paraayat = itemView.findViewById(R.id.paraayat);
+            paratrjama = itemView.findViewById(R.id.paratrjama);
 
         }
 

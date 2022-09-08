@@ -4,6 +4,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,8 +30,11 @@ public class SurahActivity extends AppCompatActivity {
        String nameU=i.getStringExtra("nameU");
        int index = Integer.parseInt(i.getStringExtra("index"));
 
+
+        int t_index = Integer.parseInt(i.getStringExtra("value"));
         ArrayList<tayah> list =dbHelper.Surah(index+1);
-        SurahAdapter sura=new SurahAdapter(this,list);
+        SurahAdapter sura=new SurahAdapter(this,list,t_index);
+
 
 //        String namesurah = i.getStringExtra("surahName");
         AllSurahList.setAdapter(sura);

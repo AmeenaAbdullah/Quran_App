@@ -50,6 +50,8 @@ public class DBhelper extends SQLiteOpenHelper {
     public ArrayList<tayah> Surah(int index){ //surah content
 
         SQLiteDatabase db = this.getWritableDatabase();
+
+
         String query = "SELECT *" + " FROM " + "tayah" + " WHERE " + "SuraID" + " = '" + index + "'";
         Cursor data = db.rawQuery(query, null);
 

@@ -15,10 +15,12 @@ import java.util.ArrayList;
 public class All_Surah_nameAdapter extends RecyclerView.Adapter<All_Surah_nameAdapter.MyVH>{
      private Context _context;
     private ArrayList<tsurah> surahList;
+    private int T_index;
 
-    public All_Surah_nameAdapter(Context c,ArrayList<tsurah> surah) {
+    public All_Surah_nameAdapter(Context c,ArrayList<tsurah> surah,int T_index) {
         this.surahList = surah;
         this._context = c;
+        this.T_index=T_index;
     }
 
     @NonNull
@@ -42,7 +44,9 @@ public class All_Surah_nameAdapter extends RecyclerView.Adapter<All_Surah_nameAd
             public void onClick(View v) {
                 Intent i=new Intent(_context,SurahActivity.class);
                  i.putExtra("index",String.valueOf(p));
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                i.putExtra("value",String.valueOf( T_index));
+                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
                 _context.startActivity(i);
             }
         });
