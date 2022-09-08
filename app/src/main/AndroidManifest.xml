@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyQuranApp">
         <activity
+            android:name=".ui.SearchActicity"
+            android:exported="false" />
+        <activity
             android:name=".ParaActivity"
             android:exported="false" />
         <activity
@@ -32,11 +35,9 @@
         <activity
             android:name=".HeaderActivity"
             android:exported="false" />
-
         <activity
             android:name=".FrontPageActivity"
             android:exported="false" />
-
         <activity
             android:name=".SplashActivity"
             android:exported="true">
