@@ -42,9 +42,7 @@ public class paraAdapter extends RecyclerView.Adapter<paraAdapter.MyVH>{
             holder.paratrjama.setText(String.valueOf( holder.data.getDrMohsinKhan()));
         else if(T_index==3)
             holder.paratrjama.setText(String.valueOf( holder.data.getMuftitakiUsmani()));
-        else if(T_index==4)
-            holder.paratrjama.setText(String.valueOf( holder.data.getMuftitakiUsmani()));
-
+        
         int p=position;
         tayah parah=ayat.get(position);
 
