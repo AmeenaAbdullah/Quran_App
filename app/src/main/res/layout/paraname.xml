@@ -10,12 +10,13 @@
 
     <View
         android:id="@+id/divider"
+
+        android:background="#9F7B30"
         android:layout_width="395dp"
         android:layout_height="3dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,15 +27,15 @@
 
         android:layout_width="47dp"
         android:layout_height="33dp"
-        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
 
-        android:layout_marginTop="36dp"
-        android:src="@drawable/ic_launcher_background"
+        android:layout_marginEnd="208dp"
         android:text="No"
         android:textAlignment="center"
+        android:textColor="#FEFCFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/paraNameE"
-        app:layout_constraintHorizontal_bias="0.237"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,11 +43,11 @@
         android:id="@+id/paraNameU"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
         android:text="SurahNameU"
-        android:textColor="@android:color/holo_green_dark"
-        android:textColorHint="@android:color/holo_green_dark"
+
+        android:textColor="#FEFCFF"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/parano"
         app:layout_constraintTop_toTopOf="parent" />
@@ -55,9 +56,13 @@
         android:id="@+id/paraNameE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="4dp"
         android:text="TextView"
+        android:textAlignment="viewEnd"
+        android:textColor="#FEFCFF"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.72"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/paraNameU" />
 

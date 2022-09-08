@@ -4,28 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/content"
     tools:context=".SurahActivity">
 
     <TextView
         android:id="@+id/surahName"
         android:layout_width="wrap_content"
         android:layout_height="53dp"
+        android:layout_marginTop="48dp"
         android:text="TextView"
-        android:textSize="24sp"
+        android:fontFamily="@font/noorehuda"
+        android:fontStyle="normal"
+        android:fontWeight="600"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="10dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/surahList"
-        android:layout_width="352dp"
-        android:layout_height="635dp"
+        android:layout_width="302dp"
+        android:layout_height="548dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.495"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/surahName"
-
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.268" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

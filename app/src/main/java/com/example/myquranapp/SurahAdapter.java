@@ -30,7 +30,7 @@ public class SurahAdapter extends ArrayAdapter<tayah>  {
         ayat.setText(String.valueOf( myclass.getArabicText()));
         TextView ayattrjama = convertView.findViewById(R.id.ayattrjama);
         if(T_index==0)
-        ayattrjama.setText(String.valueOf( myclass.getFatehMuhammadJaland()));
+            ayattrjama.setText(String.valueOf( myclass.getFatehMuhammadJaland()));
         else if(T_index==1)
             ayattrjama.setText(String.valueOf( myclass.getMehmoodulHassan()));
         else if(T_index==2)
@@ -45,4 +45,4 @@ public class SurahAdapter extends ArrayAdapter<tayah>  {
         return convertView;
     }
 
-    }
+}

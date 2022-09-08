@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -18,11 +19,11 @@ public class AllParaNamesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.all_para_names);
         store=new QDH();
-       ArrayList<para> list =store.getAllPara();
+        ArrayList<para> list =store.getAllPara();
         recyclerView = findViewById(R.id.recycleViewpara);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(AllParaNamesActivity.this,
-               LinearLayoutManager.VERTICAL,
+                LinearLayoutManager.VERTICAL,
                 false);
         recyclerView.setLayoutManager(layoutManager);
 

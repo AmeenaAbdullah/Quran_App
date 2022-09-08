@@ -25,7 +25,7 @@ public class AllSurahNamesActivity extends AppCompatActivity {
         setContentView(R.layout.nav_main);
 
         Intent i=getIntent();
-       int T_index = Integer.parseInt(i.getStringExtra("value"));
+        int T_index = Integer.parseInt(i.getStringExtra("value"));
 
         DBhelper dbHelper  = new DBhelper(AllSurahNamesActivity.this);
         ArrayList<tsurah> list =dbHelper.getAllSurah();    //Get Data from DB

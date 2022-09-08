@@ -36,17 +36,7 @@ public class paraAdapter extends RecyclerView.Adapter<paraAdapter.MyVH>{
         holder.paratrjama.setText(holder.data.getFatehMuhammadJaland());
         int p=position;
         tayah parah=ayat.get(position);
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(_context,ParaActivity.class);
-                i.putExtra("arabic",parah.getArabicText());
-                i.putExtra("tarjma", parah.getFatehMuhammadJaland());
-                i.putExtra("index",String.valueOf(p));
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                _context.startActivity(i);
-            }
-        });
+
     }
 
     @Override

@@ -25,10 +25,10 @@ public class SurahActivity extends AppCompatActivity {
         TextView name=findViewById(R.id.surahName);
         ListView AllSurahList = findViewById(R.id.surahList);
         DBhelper dbHelper  = new DBhelper(SurahActivity.this);
-       Intent i =getIntent();
-       String nameE=i.getStringExtra("nameE");
-       String nameU=i.getStringExtra("nameU");
-       int index = Integer.parseInt(i.getStringExtra("index"));
+        Intent i =getIntent();
+        String nameE=i.getStringExtra("nameE");
+        String nameU=i.getStringExtra("NameU");
+        int index = Integer.parseInt(i.getStringExtra("index"));
 
 
         int t_index = Integer.parseInt(i.getStringExtra("value"));
@@ -36,10 +36,10 @@ public class SurahActivity extends AppCompatActivity {
         SurahAdapter sura=new SurahAdapter(this,list,t_index);
 
 
+
 //        String namesurah = i.getStringExtra("surahName");
         AllSurahList.setAdapter(sura);
-         name.setText(nameU);
-//        TextView fullsurah=findViewById(R.id.fullsurah);
+        name.setText(nameU);
 //        DBhelper dbHelper  = new DBhelper(SurahActivity.this);
 //        Intent i =getIntent();
 //        int index = Integer.parseInt(i.getStringExtra("index"));
@@ -62,5 +62,5 @@ public class SurahActivity extends AppCompatActivity {
 //    Typeface typeface = Typeface.createFromAsset( getAssets(),  "noorehuda.ttf");
 //        content.setTypeface(typeface);
 
- }
+    }
 }

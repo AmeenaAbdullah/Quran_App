@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -20,7 +21,7 @@ public class ParaActivity extends AppCompatActivity {
         setContentView(R.layout.para);
         store=new QDH();
 
-
+        TextView nU=findViewById(R.id.paranameUU);
         Intent i =getIntent();
         String nameE=i.getStringExtra("nameE");
         String nameU=i.getStringExtra("nameU");
@@ -39,8 +40,9 @@ public class ParaActivity extends AppCompatActivity {
                 false);
         recyclerView.setLayoutManager(layoutManager);
 
-         adapter = new paraAdapter(getApplicationContext(),list) ;
+        adapter = new paraAdapter(getApplicationContext(),list) ;
         recyclerView.setAdapter(adapter);
+        nU.setText(nameE);
 
     }
 }

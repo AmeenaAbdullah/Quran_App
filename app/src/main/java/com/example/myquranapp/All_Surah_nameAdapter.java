@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class All_Surah_nameAdapter extends RecyclerView.Adapter<All_Surah_nameAdapter.MyVH>{
-     private Context _context;
+    private Context _context;
     private ArrayList<tsurah> surahList;
     private int T_index;
 
@@ -43,9 +43,10 @@ public class All_Surah_nameAdapter extends RecyclerView.Adapter<All_Surah_nameAd
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(_context,SurahActivity.class);
-                 i.putExtra("index",String.valueOf(p));
+                i.putExtra("index",String.valueOf(p));
                 i.putExtra("value",String.valueOf( T_index));
-                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                i.putExtra("NameU",holder.data.getSurahNameU());
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
                 _context.startActivity(i);
             }
