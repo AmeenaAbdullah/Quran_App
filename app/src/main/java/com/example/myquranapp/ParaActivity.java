@@ -26,6 +26,7 @@ public class ParaActivity extends AppCompatActivity {
         String nameE=i.getStringExtra("nameE");
         String nameU=i.getStringExtra("nameU");
         int index = Integer.parseInt(i.getStringExtra("index"));
+        int T_index = Integer.parseInt(i.getStringExtra("value"));
 
         DBhelper dbHelper  = new DBhelper(ParaActivity.this);
 
@@ -40,7 +41,7 @@ public class ParaActivity extends AppCompatActivity {
                 false);
         recyclerView.setLayoutManager(layoutManager);
 
-        adapter = new paraAdapter(getApplicationContext(),list) ;
+        adapter = new paraAdapter(getApplicationContext(),list,T_index) ;
         recyclerView.setAdapter(adapter);
         nU.setText(nameE);
 

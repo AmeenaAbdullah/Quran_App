@@ -56,25 +56,25 @@ public class AllSurahNamesActivity extends AppCompatActivity {
 
                 else if(item.getItemId()==R.id.nav_FatehMuhammad)
                 {
-                    Intent intent = new Intent(AllSurahNamesActivity.this, MainActivity.class);
+                    Intent intent = new Intent(AllSurahNamesActivity.this, FrontPageActivity.class);
                     intent.putExtra("value","1");
                     startActivity(intent);
                 }
                 else if(item.getItemId()==R.id.nav_MehmoodHassan)
                 {
 
-                    Intent intent = new Intent(AllSurahNamesActivity.this, MainActivity.class);
+                    Intent intent = new Intent(AllSurahNamesActivity.this, FrontPageActivity.class);
                     intent.putExtra("value","2");
                     startActivity(intent);
                 }
                 else if(item.getItemId()==R.id.nav_DrMohsinKhan)
                 {
-                    Intent intent = new Intent(AllSurahNamesActivity.this, MainActivity.class);
+                    Intent intent = new Intent(AllSurahNamesActivity.this, FrontPageActivity.class);
                     intent.putExtra("value","3");
                     startActivity(intent);
                 } else if(item.getItemId()==R.id.nav_MuftiTakiUsmani)
                 {
-                    Intent intent = new Intent(AllSurahNamesActivity.this, MainActivity.class);
+                    Intent intent = new Intent(AllSurahNamesActivity.this, FrontPageActivity.class);
                     intent.putExtra("value","4");
                     startActivity(intent);
                 }

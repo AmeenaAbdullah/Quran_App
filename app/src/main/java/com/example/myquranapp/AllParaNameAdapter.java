@@ -26,10 +26,11 @@ import java.util.ArrayList;
 public class AllParaNameAdapter extends RecyclerView.Adapter<AllParaNameAdapter.MyVH>{
     private Context _context;
     private ArrayList<para> surahList;
-
-    public AllParaNameAdapter(Context c,ArrayList<para> surah) {
+   private int T_index;
+    public AllParaNameAdapter(Context c,ArrayList<para> surah,int t) {
         this.surahList = surah;
         this._context = c;
+        this.T_index=t;
     }
 
     @NonNull
@@ -55,6 +56,7 @@ public class AllParaNameAdapter extends RecyclerView.Adapter<AllParaNameAdapter.
                 i.putExtra("nameE",parah.getParaNameE());
                 i.putExtra("nameU", parah.getParaNameU());
                 i.putExtra("index",String.valueOf(p));
+                i.putExtra("value",String.valueOf(T_index));
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 _context.startActivity(i);
             }

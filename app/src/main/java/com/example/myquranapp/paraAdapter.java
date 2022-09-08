@@ -16,10 +16,11 @@ public class paraAdapter extends RecyclerView.Adapter<paraAdapter.MyVH>{
     private Context _context;
     private ArrayList<tayah> ayat;
 
-
-    public paraAdapter(Context c,ArrayList<tayah> t) {
+  private int T_index;
+    public paraAdapter(Context c,ArrayList<tayah> t,int ti) {
         this.ayat = t;
         this._context = c;
+        this.T_index=ti;
     }
 
     @NonNull
@@ -33,7 +34,17 @@ public class paraAdapter extends RecyclerView.Adapter<paraAdapter.MyVH>{
     public void onBindViewHolder(@NonNull paraAdapter.MyVH holder, int position) {
         holder.data=ayat.get(position);
         holder.para.setText(holder.data.getArabicText());
-        holder.paratrjama.setText(holder.data.getFatehMuhammadJaland());
+        if(T_index==0)
+            holder.paratrjama.setText(String.valueOf( holder.data.getFatehMuhammadJaland()));
+        else if(T_index==1)
+            holder.paratrjama.setText(String.valueOf( holder.data.getFatehMuhammadJaland()));
+        else if(T_index==2)
+            holder.paratrjama.setText(String.valueOf( holder.data.getDrMohsinKhan()));
+        else if(T_index==3)
+            holder.paratrjama.setText(String.valueOf( holder.data.getMuftitakiUsmani()));
+        else if(T_index==4)
+            holder.paratrjama.setText(String.valueOf( holder.data.getMuftitakiUsmani()));
+
         int p=position;
         tayah parah=ayat.get(position);
 

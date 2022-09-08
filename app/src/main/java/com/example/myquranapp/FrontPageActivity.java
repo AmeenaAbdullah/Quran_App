@@ -13,6 +13,8 @@ public class FrontPageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.front_page);
+        Intent i=getIntent();
+        int T_index = Integer.parseInt(i.getStringExtra("value"));
 
         Button surahIndex= findViewById(R.id.surahIndex);
         Button paraIndex=findViewById(R.id.paraIndex);
@@ -21,7 +23,7 @@ public class FrontPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent surahIndex=new Intent(FrontPageActivity.this,AllSurahNamesActivity.class);
-                surahIndex.putExtra("value","0");
+                surahIndex.putExtra("value",String.valueOf(T_index));
                 startActivity(surahIndex);
             }
         });
@@ -31,7 +33,7 @@ public class FrontPageActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent surahIndex=new Intent(FrontPageActivity.this,AllParaNamesActivity.class);
-                surahIndex.putExtra("value","0");
+                surahIndex.putExtra("value",String.valueOf(T_index));
                 startActivity(surahIndex);
             }
         });

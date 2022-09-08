@@ -32,10 +32,12 @@ public class SurahAdapter extends ArrayAdapter<tayah>  {
         if(T_index==0)
             ayattrjama.setText(String.valueOf( myclass.getFatehMuhammadJaland()));
         else if(T_index==1)
-            ayattrjama.setText(String.valueOf( myclass.getMehmoodulHassan()));
+            ayattrjama.setText(String.valueOf( myclass.getFatehMuhammadJaland()));
         else if(T_index==2)
             ayattrjama.setText(String.valueOf( myclass.getDrMohsinKhan()));
         else if(T_index==3)
+            ayattrjama.setText(String.valueOf( myclass.getMuftitakiUsmani()));
+        else if(T_index==4)
             ayattrjama.setText(String.valueOf( myclass.getMuftitakiUsmani()));
 
 
