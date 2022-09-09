@@ -52,7 +52,7 @@ public class DBhelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
 
-        String query = "SELECT *" + " FROM " + "tayah" + " WHERE " + "SuraID" + " = '" + index + "'";
+        String query = "SELECT *" + " FROM " + "tayah" + " WHERE " + "SuraID" + " =    '" + index + "'   ";
         Cursor data = db.rawQuery(query, null);
 
         ArrayList<tayah> surah = new ArrayList<>();
@@ -81,6 +81,22 @@ public class DBhelper extends SQLiteOpenHelper {
         }
         data.close();
         return  ayat;
+    }
+    public ArrayList<tsurah> searchdata(String text){
+        ArrayList<tsurah> ArrayList=new ArrayList<>();
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "SELECT * FROM "+ " tsurah " + " WHERE "+ " SurahNameE "+ " LIKE " + "'%" +""+text+""+"%'";
+        Cursor cursor = db.rawQuery(query,null);
+        if (cursor.moveToFirst()) {
+            do {
+
+                ArrayList.add(new tsurah(cursor.getInt(0),cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4)));
+            } while (cursor.moveToNext());
+
+        }
+
+        cursor.close();
+        return ArrayList;
     }
 
 //    public ArrayList<tayah> getParah(int index){
