@@ -9,11 +9,23 @@
 
     tools:context=".AllSurahNamesActivity">
 
+
+    <EditText
+        android:id="@+id/edittext"
+        android:layout_width="270dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="76dp"
+        android:background="#ffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/para"
         android:layout_width="149dp"
         android:layout_height="39dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:text="@string/suraindex"
         android:textColor="#FEFCFF"
         android:textSize="26dp"
@@ -30,9 +42,8 @@
         android:layout_height="548dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/para"
-        app:layout_constraintVertical_bias="0.28" />
+        app:layout_constraintVertical_bias="0.591" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

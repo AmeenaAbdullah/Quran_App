@@ -42,7 +42,7 @@ public class FrontPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent surahIndex=new Intent(FrontPageActivity.this,AllParaNamesActivity.class);
+                Intent surahIndex=new Intent(FrontPageActivity.this,SearchActivity.class);
 
                 startActivity(surahIndex);
             }

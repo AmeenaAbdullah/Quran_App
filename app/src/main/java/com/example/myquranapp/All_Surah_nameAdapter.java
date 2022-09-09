@@ -2,12 +2,14 @@ package com.example.myquranapp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -16,6 +18,9 @@ public class All_Surah_nameAdapter extends RecyclerView.Adapter<All_Surah_nameAd
     private Context _context;
     private ArrayList<tsurah> surahList;
     private int T_index;
+    public All_Surah_nameAdapter(){
+
+    }
 
     public All_Surah_nameAdapter(Context c,ArrayList<tsurah> surah,int T_index) {
         this.surahList = surah;
@@ -30,6 +35,7 @@ public class All_Surah_nameAdapter extends RecyclerView.Adapter<All_Surah_nameAd
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.surahname, parent, false);
         return new MyVH(itemView);
     }
+
 
     @Override
     public void onBindViewHolder(@NonNull All_Surah_nameAdapter.MyVH holder, int position) {
@@ -53,9 +59,16 @@ public class All_Surah_nameAdapter extends RecyclerView.Adapter<All_Surah_nameAd
         });
     }
 
+
     @Override
     public int getItemCount() {
         return surahList.size();
+    }
+
+    public void filterListData(ArrayList<tsurah> s){
+        surahList.clear();
+        surahList.addAll(s);
+        this.notifyDataSetChanged();
     }
     public class MyVH extends RecyclerView.ViewHolder {
         TextView Surah_U;
@@ -75,6 +88,7 @@ public class All_Surah_nameAdapter extends RecyclerView.Adapter<All_Surah_nameAd
         }
 
     }
+
 }
 
 

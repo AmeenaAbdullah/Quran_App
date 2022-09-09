@@ -9,26 +9,35 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class AllSurahNamesActivity extends AppCompatActivity {
     RecyclerView recyclerView;
-    RecyclerView.Adapter adapter;
+    All_Surah_nameAdapter adapter;
     RecyclerView.LayoutManager layoutManager;
+    ArrayList<tsurah> list;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nav_main);
+        EditText edit = findViewById(R.id.edittext);
 
-        Intent i=getIntent();
+
+
+        Intent i = getIntent();
         int T_index = Integer.parseInt(i.getStringExtra("value"));
 
-        DBhelper dbHelper  = new DBhelper(AllSurahNamesActivity.this);
-        ArrayList<tsurah> list =dbHelper.getAllSurah();    //Get Data from DB
+        DBhelper dbHelper = new DBhelper(AllSurahNamesActivity.this);
+         list = dbHelper.getAllSurah();    //Get Data from DB
         recyclerView = findViewById(R.id.recycleViewsurah);
 
         recyclerView.setHasFixedSize(true);
@@ -36,54 +45,74 @@ public class AllSurahNamesActivity extends AppCompatActivity {
                 LinearLayoutManager.VERTICAL,
                 false);
         recyclerView.setLayoutManager(layoutManager);
-        adapter = new All_Surah_nameAdapter(getApplicationContext(),list,T_index) ;
+        adapter = new All_Surah_nameAdapter(getApplicationContext(), list, T_index);
 
         recyclerView.setAdapter(adapter);
 
+        edit.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable ss) {
+                filterr(ss.toString());
+
+            }
+        });
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
 
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if(item.getItemId()==R.id.nav_home)
-                {
+                if (item.getItemId() == R.id.nav_home) {
 
                     Intent intent = new Intent(AllSurahNamesActivity.this, FrontPageActivity.class);
-                    intent.putExtra("value","0");
+                    intent.putExtra("value", "0");
+                    startActivity(intent);
+                } else if (item.getItemId() == R.id.nav_FatehMuhammad) {
+                    Intent intent = new Intent(AllSurahNamesActivity.this, FrontPageActivity.class);
+                    intent.putExtra("value", "1");
+                    startActivity(intent);
+                } else if (item.getItemId() == R.id.nav_MehmoodHassan) {
+
+                    Intent intent = new Intent(AllSurahNamesActivity.this, FrontPageActivity.class);
+                    intent.putExtra("value", "2");
+                    startActivity(intent);
+                } else if (item.getItemId() == R.id.nav_DrMohsinKhan) {
+                    Intent intent = new Intent(AllSurahNamesActivity.this, FrontPageActivity.class);
+                    intent.putExtra("value", "3");
+                    startActivity(intent);
+                } else if (item.getItemId() == R.id.nav_MuftiTakiUsmani) {
+                    Intent intent = new Intent(AllSurahNamesActivity.this, FrontPageActivity.class);
+                    intent.putExtra("value", "4");
                     startActivity(intent);
                 }
 
-                else if(item.getItemId()==R.id.nav_FatehMuhammad)
-                {
-                    Intent intent = new Intent(AllSurahNamesActivity.this, FrontPageActivity.class);
-                    intent.putExtra("value","1");
-                    startActivity(intent);
-                }
-                else if(item.getItemId()==R.id.nav_MehmoodHassan)
-                {
-
-                    Intent intent = new Intent(AllSurahNamesActivity.this, FrontPageActivity.class);
-                    intent.putExtra("value","2");
-                    startActivity(intent);
-                }
-                else if(item.getItemId()==R.id.nav_DrMohsinKhan)
-                {
-                    Intent intent = new Intent(AllSurahNamesActivity.this, FrontPageActivity.class);
-                    intent.putExtra("value","3");
-                    startActivity(intent);
-                } else if(item.getItemId()==R.id.nav_MuftiTakiUsmani)
-                {
-                    Intent intent = new Intent(AllSurahNamesActivity.this, FrontPageActivity.class);
-                    intent.putExtra("value","4");
-                    startActivity(intent);
-                }
-
-                DrawerLayout drawerLayout=findViewById(R.id.drawer_layout);
+                DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
                 drawerLayout.closeDrawer(GravityCompat.START);
                 return true;
             }
         });
 
     }
+
+    public void filterr(String s){
+        ArrayList<tsurah> surahs = new ArrayList<>();
+        for (tsurah su : list) {
+            String surahname=su.getSurahNameE();
+            if (surahname.toLowerCase().contains(s.toLowerCase())) {
+                surahs.add(su);
+            }
+        }
+        adapter.filterListData(surahs);
+    }
 }
+

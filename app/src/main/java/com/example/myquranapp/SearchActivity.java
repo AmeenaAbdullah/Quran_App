@@ -1,14 +1,15 @@
-package com.example.myquranapp.ui;
+package com.example.myquranapp;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.myquranapp.R;
-public class SearchActicity extends AppCompatActivity {
+public class SearchActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search_acticity);
+        setContentView(R.layout.activity_search);
+
     }
 }
