@@ -59,8 +59,6 @@ public class SurahActivity extends AppCompatActivity {
 //        fullsurah.setText(content);
 //        name.setText(namesurah);
 
-//    Typeface typeface = Typeface.createFromAsset( getAssets(),  "noorehuda.ttf");
-//        content.setTypeface(typeface);
 
     }
 }

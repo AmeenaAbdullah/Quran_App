@@ -1,11 +1,9 @@
 package com.example.myquranapp.ui;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
 import com.example.myquranapp.R;
-
 public class SearchActicity extends AppCompatActivity {
 
     @Override
