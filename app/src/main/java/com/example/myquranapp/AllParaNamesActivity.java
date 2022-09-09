@@ -10,26 +10,30 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 
-public class AllParaNamesActivity extends AppCompatActivity {
+public class AllParaNamesActivity extends AppCompatActivity  {
     QDH store;
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
     RecyclerView.LayoutManager layoutManager;
+    ArrayList<para> list;
+    int T_index;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nav_para);
         store=new QDH();
         Intent i=getIntent();
-        int T_index = Integer.parseInt(i.getStringExtra("value"));
+        T_index = Integer.parseInt(i.getStringExtra("value"));
+//        SearchView simpleSearchView=(SearchView)findViewById(R.id.simpleSearchViewPara);
 
-        ArrayList<para> list =store.getAllPara();
+        list =store.getAllPara();
         recyclerView = findViewById(R.id.recycleViewpara);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(AllParaNamesActivity.this,
@@ -83,6 +87,9 @@ public class AllParaNamesActivity extends AppCompatActivity {
                 return true;
             }
         });
+//        simpleSearchView.setOnQueryTextListener((SearchView.OnQueryTextListener) this);
+
 
     }
+
 }

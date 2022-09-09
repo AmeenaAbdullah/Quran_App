@@ -29,10 +29,6 @@ public class AllSurahNamesActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nav_main);
-        EditText edit = findViewById(R.id.edittext);
-
-
-
         Intent i = getIntent();
         int T_index = Integer.parseInt(i.getStringExtra("value"));
 
@@ -49,23 +45,6 @@ public class AllSurahNamesActivity extends AppCompatActivity {
 
         recyclerView.setAdapter(adapter);
 
-        edit.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable ss) {
-                filterr(ss.toString());
-
-            }
-        });
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -104,15 +83,6 @@ public class AllSurahNamesActivity extends AppCompatActivity {
 
     }
 
-    public void filterr(String s){
-        ArrayList<tsurah> surahs = new ArrayList<>();
-        for (tsurah su : list) {
-            String surahname=su.getSurahNameE();
-            if (surahname.toLowerCase().contains(s.toLowerCase())) {
-                surahs.add(su);
-            }
-        }
-        adapter.filterListData(surahs);
-    }
+
 }
 

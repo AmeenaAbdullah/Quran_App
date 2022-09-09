@@ -6,7 +6,7 @@ import java.util.List;
 
 
 public class QDH {
-    public int [] PSP = {
+    public int[] PSP = {
             1,
             150,
             261,
@@ -583,14 +583,23 @@ public class QDH {
         return PSP[parahNumber];
     }
 
-    public ArrayList<para> getAllPara(){
-        ArrayList<para> parah=new ArrayList<>();
-        for(int i=0;i< PSP.length;i++){
-            Log.d("lenght",String.valueOf( PSP.length));
-            parah.add(new para(i+1,englishParahName[i],ParahName[i]));
+    public ArrayList<para> getAllPara() {
+        ArrayList<para> parah = new ArrayList<>();
+        for (int i = 0; i < PSP.length; i++) {
+            Log.d("lenght", String.valueOf(PSP.length));
+            parah.add(new para(i + 1, englishParahName[i], ParahName[i]));
         }
-        return  parah;
+        return parah;
     }
+
+    public ArrayList<para> searchdata(String text) {
+        ArrayList<para> parah = new ArrayList<>();
+        for (int i = 0; i < PSP.length; i++) {
+            if (englishParahName[i].contains(text)) {
+                parah.add(new para(i + 1, englishParahName[i], ParahName[i]));
+            }
+
+        } return parah;
+    }
+
 }
-
-

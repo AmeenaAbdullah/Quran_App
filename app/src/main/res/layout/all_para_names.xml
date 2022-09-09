@@ -8,6 +8,7 @@
     android:background="@drawable/background"
     tools:context=".AllSurahNamesActivity">
 
+ 
     <TextView
         android:id="@+id/para"
         android:layout_width="136dp"
