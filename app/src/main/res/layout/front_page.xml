@@ -23,26 +23,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/paraIndex"
-        android:layout_width="248dp"
-        android:layout_height="65dp"
-        android:layout_marginBottom="276dp"
-
-        android:width="300dp"
-        android:backgroundTint="#251C13"
-        android:padding="15dp"
-        android:text="@string/ParaIndex"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
         android:id="@+id/surahIndex"
         android:layout_width="249dp"
         android:layout_height="69dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="32dp"
         android:width="300dp"
         android:backgroundTint="#251C13"
         android:padding="15dp"
@@ -51,13 +35,30 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/paraIndex"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/paraIndex"
+        android:layout_width="248dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="312dp"
+
+        android:width="300dp"
+        android:backgroundTint="#251C13"
+        android:padding="15dp"
+        android:text="@string/ParaIndex"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.549"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/ssearch"
         android:layout_width="249dp"
         android:layout_height="69dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
         android:width="300dp"
         android:backgroundTint="#251C13"
         android:padding="15dp"
@@ -65,7 +66,7 @@
         android:text="@string/Search"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintHorizontal_bias="0.552"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/paraIndex" />
 
@@ -81,7 +82,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.755" />
+        app:layout_constraintVertical_bias="0.809" />
 
     <TextView
         android:id="@+id/textView4"
