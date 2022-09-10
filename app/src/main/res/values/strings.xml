@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Quran Pak</string>
     <string name="Quran">Holy Quran</string>
-
+    <string name="translation">Translation</string>
     <string name="ParaIndex">Para Index</string>
     <string name="Search">Search</string>
     <string name="suraindex">Surah Index</string>

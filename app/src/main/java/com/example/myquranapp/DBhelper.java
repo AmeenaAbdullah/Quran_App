@@ -10,10 +10,10 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class DBhelper extends SQLiteOpenHelper {
-
-
+    private  String SurahNameE="SurahNameE";
     public DBhelper(@Nullable Context context)
     {
         super(context, "QuranDb.db",null, 1);
@@ -85,7 +85,7 @@ public class DBhelper extends SQLiteOpenHelper {
     public ArrayList<tsurah> searchdata(String text){
         ArrayList<tsurah> ArrayList=new ArrayList<>();
         SQLiteDatabase db = this.getWritableDatabase();
-        String query = "SELECT * FROM "+ " tsurah " + " WHERE "+ " SurahNameE "+ " LIKE " + "'%" +""+text+""+"%'";
+        String query = "SELECT * FROM "+ " tsurah " + " WHERE " + SurahNameE.toLowerCase() + " LIKE " + "'%" +""+text.toLowerCase()+""+"%'";
         Cursor cursor = db.rawQuery(query,null);
         if (cursor.moveToFirst()) {
             do {
