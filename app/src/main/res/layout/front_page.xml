@@ -11,7 +11,7 @@
         android:id="@+id/textView"
         android:layout_width="267dp"
         android:layout_height="60dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="84dp"
         android:backgroundTint="#E8E8E8"
         android:fontFamily="serif"
         android:text="@string/Quran"
