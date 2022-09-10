@@ -27,7 +27,7 @@
         android:id="@+id/surahIndex"
         android:layout_width="249dp"
         android:layout_height="69dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="28dp"
         android:width="300dp"
         android:backgroundTint="#251C13"
         android:padding="15dp"
@@ -36,14 +36,16 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/paraIndex"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.546"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/molvi"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/paraIndex"
         android:layout_width="248dp"
         android:layout_height="65dp"
-        android:layout_marginBottom="312dp"
+        android:layout_marginBottom="260dp"
 
         android:width="300dp"
         android:backgroundTint="#251C13"
@@ -52,14 +54,14 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/ssearch"
         android:layout_width="249dp"
         android:layout_height="69dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
         android:width="300dp"
         android:backgroundTint="#251C13"
         android:padding="15dp"
@@ -67,7 +69,7 @@
         android:text="@string/Search"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/paraIndex" />
 
@@ -75,25 +77,26 @@
         android:id="@+id/molvi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:text="TextView"
         android:textColor="#FEFCFF"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/surahIndex"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.753" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="8dp"
         android:text="@string/translation"
         android:textColor="#FEFCFF"
-        android:textSize="26sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
